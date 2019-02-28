@@ -1,0 +1,12 @@
+t=int(input())
+l=[];v=[];h=[]
+for t1 in range(t):
+    l.append(list(input().split()))
+    if l[t1][0]=='H':h.append(t1)
+    else:
+        v.append(t1)
+print((len(v)//2)+len(h))
+if len(v)%2!=0:v.pop()
+for i in range(len(h)):print(h[i])
+for i in range(0,len(v),2):
+    print(v[i],v[i+1])
